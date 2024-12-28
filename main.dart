@@ -49,17 +49,17 @@ class Library {
   List users = [];
 
   Library(this.books, this.users);
-
+//adding books to the library
   void addBook(Books b) {
     books.add(b);
     print('Book added: ${b.title}');
   }
-
+//adding users to the library
   void addUser(Users u) {
     users.add(u);
     print('user add: ${u.name}');
   }
-
+//borrowing books
   void borrowBook(int bookid) {
     bool bookfound = false;
     for (int i = 0; i < books.length; i++) {
@@ -77,7 +77,7 @@ class Library {
     }
    print("Book $bookid not found");
   }
-
+//returning books
   void returnBook(int bookid) {
     bool bookfound = false;
     for (int i = 0; i < books.length; i++) {
@@ -96,7 +96,7 @@ class Library {
       }
     }
   }
-
+//displaying books and users in the library
   void displayInfo() {
     print("our users");
     users.forEach((user) {
